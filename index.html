@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+          crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <form id="form">
+        <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" id="name"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Name is invalid.</small>
+        </div>
+        <div class="form-control">
+            <label for="surname">Surname</label>
+            <input type="email" id="surname"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Surname is invalid.</small>
+        </div>
+        <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Email is invalid.</small>
+        </div>
+        <button>Add</button>
+    </form>
+
+<table>
+    <caption>Student's list</caption>
+    <thead>
+    <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Surname</th>
+        <th scope="col">Email</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+</div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script src="script.js"></script>
+<script src="validationForm.js"></script>
+</body>
+</html>
