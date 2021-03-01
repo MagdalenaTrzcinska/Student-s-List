@@ -9,7 +9,6 @@ form {
     margin: 10% 5%;
     float: left;
 }
-
 .form-control {
     margin-bottom: 20px;
     position: relative;
@@ -72,6 +71,15 @@ table {
     width: 60%;
     margin: 0 auto;
     border-collapse: collapse;
+}
+
+@media (max-width: 960px) {
+    form, table {
+        width: 100%;
+        float: none;
+        margin: 10% 0;
+    }
+
 }
 
 th[scope = col],

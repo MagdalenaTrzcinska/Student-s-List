@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c21a8409-757a-4506-a2d4-95507450eed5" name="Default Changelist" comment="" />
+    <list default="true" id="c21a8409-757a-4506-a2d4-95507450eed5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +27,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
@@ -35,6 +42,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -63,6 +71,7 @@
       <workItem from="1614502848884" duration="2799000" />
       <workItem from="1614511057627" duration="2161000" />
       <workItem from="1614522406693" duration="8227000" />
+      <workItem from="1614532736363" duration="273000" />
     </task>
     <servers />
   </component>
@@ -74,11 +83,11 @@
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="553" y="180" key="#Inspections/-1920.157.1920.1175/0.25.1920.985@0.25.1920.985" timestamp="1614502702621" />
-    <state x="653" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1614522405606">
+    <state x="653" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1614532736840">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="653" y="355" key="com.intellij.ide.util.TipDialog/-1920.155.1920.1177/0.23.1920.999@0.23.1920.999" timestamp="1612354129534" />
-    <state x="653" y="352" key="com.intellij.ide.util.TipDialog/-1920.157.1920.1175/0.25.1920.985@0.25.1920.985" timestamp="1614522405606" />
+    <state x="653" y="352" key="com.intellij.ide.util.TipDialog/-1920.157.1920.1175/0.25.1920.985@0.25.1920.985" timestamp="1614532736840" />
     <state x="625" y="243" width="670" height="158" key="search.everywhere.popup" timestamp="1612360420213">
       <screen x="0" y="23" width="1920" height="999" />
     </state>
