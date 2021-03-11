@@ -26,12 +26,14 @@ function checkInputs() {
         formControl[1].classList.add('success');
     }
 
-
     if (emailValue === '') {
-        errorMessage(2, "Enter a email.");
+        errorMessage(2, "Enter an email.");
     } else if (withoutSpace(emailValue)) {
-        errorMessage(2, "Name contains a forbidden character.");
-    } else {
+        errorMessage(2, "Email contains a forbidden character.");
+    } else if (!withoutAtRule(emailValue)) {
+        errorMessage(2, "Email must include @");
+    }
+    else {
         formControl[2].classList.add('success');
     }
 
@@ -58,6 +60,10 @@ function withoutNumbersAndSpace(name) {
 
 function withoutSpace(email) {
     return /\s/.test(email);
+}
+
+function withoutAtRule(email) {
+    return /@/.test(email);
 }
 
 

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+
+thead, tbody {
+    font-family: 'Lato', sans-serif;
+}
+
 .container {
     width: 70%;
     margin: 10% auto;
@@ -6,8 +12,9 @@
 
 form {
     width: 30%;
-    margin: 10% 5%;
+    padding: 10% 3%;
     float: left;
+    border-right: 2px solid #f4ecff;
 }
 .form-control {
     margin-bottom: 20px;
@@ -58,12 +65,19 @@ form {
 }
 
 form button {
-    background-color: #9c9c9c;
+    background-color: #6815df;
     border: #9c9c9c;
     border-radius: 5px;
     color: #fff;
     width: 100%;
     height: 35px;
+    transition: .5s;
+    outline: none;
+}
+
+form button:hover {
+    background-color: #8f4dff;
+    outline: none;
 }
 
 table {
@@ -82,10 +96,11 @@ table {
 
 }
 
-th[scope = col],
-th[scope = row] {
-    background-color: #ececec;
+th[scope = col]{
+    background-color: #6815df;
+    color: white;
 }
+
 
 th[scope = col] {
     height: 50px;
@@ -95,14 +110,25 @@ caption {
     font-variant: small-caps;
     font-size: 50px;
     text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+    margin-bottom: 20px;
 }
 
 table {
     overflow: hidden;
 }
 
-table, td, th {
-    border: 1px solid black;
+
+tr:nth-child(2n+1) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f4ecff;
+    cursor: pointer;
+}
+
+tr {
+    height: 50px;
 }
 
 td {
