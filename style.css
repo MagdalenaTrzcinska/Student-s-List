@@ -1,75 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
 
-thead, tbody {
-    font-family: 'Lato', sans-serif;
+
+body {
+    margin: 0;
 }
 
-.container {
-    width: 70%;
-    margin: 10% auto;
-    position: relative;
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
+
+/*******************
+       FORM
+********************/
 
 form {
-    width: 30%;
-    padding: 10% 3%;
-    float: left;
+    padding: 8%;
     border-right: 2px solid #f4ecff;
 }
-.form-control {
-    margin-bottom: 20px;
+
+.form-single {
     position: relative;
+    margin-bottom: 20px;
 }
 
-.form-control input {
+.form-single input {
     height: 30px;
-    width: 98%;
+    width: 100%;
     margin-top: 10px;
     border: 2px solid #f1f1f1;
     border-radius: 5px;
     outline: none;
 }
 
-.form-control.success input {
+
+.form-single.success input {
     border-color: #2ec76c;
 }
 
-.form-control.error input {
+.form-single.error input {
     border-color: #e74b3b;
 }
 
-.form-control i {
+.form-single i {
     visibility: hidden;
     position: absolute;
     top: calc(30px + (30px - 16px) / 2 + 1px);
     right: 10px;
 }
 
-.form-control.success i.fa-check-circle {
+.form-single.success i.fa-check-circle {
     color: #2ec76c;
     visibility: visible;
 }
 
-.form-control.error i.fa-exclamation-circle {
+.form-single.error i.fa-exclamation-circle {
     color: #e74b3b;
     visibility: visible;
 }
 
-.form-control small {
+.form-single small {
+    margin-left: 5px;
     color: #e74b3b;
     visibility: hidden;
 }
 
-.form-control.error small {
+.form-single.error small {
     visibility: visible;
 }
 
 form button {
+    border: 2px solid #6815df;
     background-color: #6815df;
-    border: #9c9c9c;
     border-radius: 5px;
     color: #fff;
-    width: 100%;
+    width: 102%;
     height: 35px;
     transition: .5s;
     outline: none;
@@ -77,58 +84,46 @@ form button {
 
 form button:hover {
     background-color: #8f4dff;
-    outline: none;
 }
+
+/*******************
+       TABLE
+********************/
 
 table {
-    float: right;
-    width: 60%;
-    margin: 0 auto;
-    border-collapse: collapse;
+    border-collapse: collapse; /* ? */
+    overflow: hidden;
+    width: 40%;
 }
 
-@media (max-width: 960px) {
-    form, table {
-        width: 100%;
-        float: none;
-        margin: 10% 0;
-    }
-
-}
-
-th[scope = col]{
-    background-color: #6815df;
-    color: white;
-}
-
-
-th[scope = col] {
-    height: 50px;
-}
-
-caption {
+table caption {
     font-variant: small-caps;
     font-size: 50px;
     text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
     margin-bottom: 20px;
 }
 
-table {
-    overflow: hidden;
+thead, tbody {
+    font-family: 'Lato', sans-serif;
+
 }
 
+thead th[scope = col]{
+    background-color: #6815df;
+    color: white;
+}
+
+tr {
+    height: 50px;
+}
 
 tr:nth-child(2n+1) {
     background-color: #f9f9f9;
 }
 
-tr:hover {
+tbody tr:hover {
     background-color: #f4ecff;
     cursor: pointer;
-}
-
-tr {
-    height: 50px;
 }
 
 td {
@@ -142,9 +137,31 @@ td {
 
 @keyframes entry {
     0% {
-        left: 800px
+        left: 800px;
     }
     100% {
-        left: 0
+        left: 0;
     }
 }
+
+/*******************
+       MEDIA
+********************/
+
+@media (max-width: 1460px) {
+    section {
+        flex-direction: column;
+    }
+
+    form {
+        border-bottom: 2px solid #f4ecff;
+        border-right: 0;
+        width: 40%;
+    }
+
+    table {
+        width: 70%;
+    }
+}
+
+

@@ -1,7 +1,7 @@
 const name = document.getElementById('name');
 const surname = document.getElementById('surname');
 const email = document.getElementById('email');
-const formControl = document.querySelectorAll('.form-control');
+const formControl = document.querySelectorAll('.form-single');
 const small = document.querySelectorAll('small');
 
 

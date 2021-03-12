@@ -11,23 +11,23 @@
 </head>
 <body>
 
-<div class="container">
+<section>
     <form id="form">
-        <div class="form-control">
+        <div class="form-single">
             <label for="name">Name</label>
             <input type="text" id="name"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Name is invalid.</small>
         </div>
-        <div class="form-control">
+        <div class="form-single">
             <label for="surname">Surname</label>
             <input type="email" id="surname"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Surname is invalid.</small>
         </div>
-        <div class="form-control">
+        <div class="form-single">
             <label for="email">Email</label>
             <input type="email" id="email"/>
             <i class="fas fa-check-circle"></i>
@@ -37,19 +37,23 @@
         <button>Add</button>
     </form>
 
-<table>
-    <caption>Student's list</caption>
-    <thead>
-    <tr>
-        <th scope="col">No.</th>
-        <th scope="col">Name</th>
-        <th scope="col">Surname</th>
-        <th scope="col">Email</th>
-    </tr>
-    </thead>
-    <tbody></tbody>
-</table>
-</div>
+
+
+    <table>
+        <caption>Student's list</caption>
+        <thead>
+        <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Email</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+
+</section>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>

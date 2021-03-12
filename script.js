@@ -37,7 +37,7 @@ ref.once("value", (snapshot) => {
         let key = Object.keys(snapshot.val());
         let id = parseInt(key[index]) + 1;
 
-        tr.innerHTML = `<th scope="row">${id}</th>
+        tr.innerHTML = `<td style="animation-delay:${delay}s">${id}</td>
     <td style="animation-delay:${delay}s">${data.name}</td>
     <td style="animation-delay:${delay}s">${data.surname}</td>
     <td style="animation-delay:${delay}s">${data.email}</td>`;
