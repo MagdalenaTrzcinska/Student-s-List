@@ -24,7 +24,6 @@ btnAdd.addEventListener('click', (e) => {
 
     }
 });
-
 function addingToBase() {
     firebase.database().ref('student/' + index).set({
         name: name.value,
@@ -38,10 +37,10 @@ function addingToBase() {
         id: index
     };
 
+    index++;
     resetForm();
-
     students.push(data);
-    addSingle(data);
+    addingToTable(data);
 }
 
 function resetForm() {
@@ -52,7 +51,7 @@ function resetForm() {
     })
 }
 
-function update() {
+function readingFromBase() {
     students = [];
     firebase.database().ref('student').once("value", (snapshot) => {
         snapshot.forEach((childSnapshot) => {
@@ -61,15 +60,15 @@ function update() {
             let id = parseInt(key[index]);
 
             data.id = id;
-            students.push(data);
             index++;
-            addSingle(data);
-
+            students.push(data);
+            console.log(students);
+            addingToTable(data);
         });
     });
 }
 
-function addSingle(data) {
+function addingToTable(data) {
     const tr = document.createElement("tr");
     tr.innerHTML = `<td style="animation-delay:${delay}s">${data.name}</td>
     <td style="animation-delay:${delay}s">${data.surname}</td>
@@ -78,17 +77,17 @@ function addSingle(data) {
     delay += 0.1;
 
     tr.addEventListener('click', () => {
-        deleteSingle(data.id);
+        deletingSingle(data.id);
     });
 }
 
-update();
+readingFromBase();
 
 
-function deleteSingle(id) {
+function deletingSingle(id) {
     //students.splice(data.id, 0);
     table.innerHTML = '';
-    update();
+    readingFromBase();
     firebase.database().ref('student/' + id).remove();
 
 }
