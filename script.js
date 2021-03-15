@@ -1,5 +1,5 @@
 const btnAdd = document.querySelector("button");
-
+const table = document.querySelector('tbody');
 
 const firebaseConfig = {
     apiKey: "AIzaSyCIthAq7OP5fwoAZbgam594PB1KMnRGXjo",
@@ -10,46 +10,20 @@ const firebaseConfig = {
     appId: "1:232860863602:web:9e521ec9a2e3bc896146eb"
 };
 
-const table = document.querySelector('tbody');
-const tr = document.createElement("tr");
-
 firebase.initializeApp(firebaseConfig);
-let database = firebase.database();
-let ref = database.ref("student");
+
+let students = [];
+let delay = 0.1;
 let index = 0;
 
 btnAdd.addEventListener('click', (e) => {
     e.preventDefault();
 
     if (checkInputs()) {
-        addingToBase();
+        setTimeout(addingToBase, 400);
+
     }
 });
-
-
-ref.once("value", (snapshot) => {
-    let delay = 0;
-
-    snapshot.forEach((childSnapshot) => {
-        let data = childSnapshot.val();
-        const tr = document.createElement("tr");
-        tr.className = 'person';
-        let key = Object.keys(snapshot.val());
-        let id = parseInt(key[index]) + 1;
-
-        tr.innerHTML = `<td style="animation-delay:${delay}s">${id}</td>
-    <td style="animation-delay:${delay}s">${data.name}</td>
-    <td style="animation-delay:${delay}s">${data.surname}</td>
-    <td style="animation-delay:${delay}s">${data.email}</td>`;
-        table.appendChild(tr);
-
-        delay += 0.1;
-        index++;
-    });
-
-});
-
-
 
 function addingToBase() {
     firebase.database().ref('student/' + index).set({
@@ -57,14 +31,65 @@ function addingToBase() {
         surname: surname.value,
         email: email.value
     });
+    const data = {
+        email: email.value,
+        name: name.value,
+        surname: surname.value,
+        id: index
+    };
 
-    const tr = document.createElement("tr");
+    resetForm();
 
-    tr.innerHTML = `<th scope="row">${index}</th>
-        <td>${name.value}</td>
-        <td>${surname.value}</td>
-        <td>${email.value}</td>`;
-
-    table.appendChild(tr);
-    index++;
+    students.push(data);
+    addSingle(data);
 }
+
+function resetForm() {
+    document.getElementById('form').reset();
+    formControl.forEach((event) => {
+        event.classList.remove('success');
+        event.classList.remove('error');
+    })
+}
+
+function update() {
+    students = [];
+    firebase.database().ref('student').once("value", (snapshot) => {
+        snapshot.forEach((childSnapshot) => {
+            let data = childSnapshot.val();
+            let key = Object.keys(snapshot.val());
+            let id = parseInt(key[index]);
+
+            data.id = id;
+            students.push(data);
+            index++;
+            addSingle(data);
+
+        });
+    });
+}
+
+function addSingle(data) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td style="animation-delay:${delay}s">${data.name}</td>
+    <td style="animation-delay:${delay}s">${data.surname}</td>
+    <td style="animation-delay:${delay}s">${data.email}</td>`;
+    table.appendChild(tr);
+    delay += 0.1;
+
+    tr.addEventListener('click', () => {
+        deleteSingle(data.id);
+    });
+}
+
+update();
+
+
+function deleteSingle(id) {
+    //students.splice(data.id, 0);
+    table.innerHTML = '';
+    update();
+    firebase.database().ref('student/' + id).remove();
+
+}
+

@@ -5,8 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/validationForm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +73,10 @@
       <workItem from="1614522406693" duration="8227000" />
       <workItem from="1614532736363" duration="273000" />
       <workItem from="1615469813235" duration="6315000" />
-      <workItem from="1615539244035" duration="5639000" />
+      <workItem from="1615539244035" duration="5728000" />
+      <workItem from="1615549397516" duration="3975000" />
+      <workItem from="1615788678013" duration="2782000" />
+      <workItem from="1615792505505" duration="5012000" />
     </task>
     <servers />
   </component>
@@ -87,14 +88,15 @@
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="553" y="180" key="#Inspections/-1920.157.1920.1175/0.25.1920.985@0.25.1920.985" timestamp="1614502702621" />
-    <state x="653" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1615539243589">
+    <state x="653" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1615788678072">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="653" y="355" key="com.intellij.ide.util.TipDialog/-1920.155.1920.1177/0.23.1920.999@0.23.1920.999" timestamp="1612354129534" />
-    <state x="653" y="352" key="com.intellij.ide.util.TipDialog/-1920.157.1920.1175/0.25.1920.985@0.25.1920.985" timestamp="1615539243589" />
-    <state x="625" y="243" width="670" height="158" key="search.everywhere.popup" timestamp="1612360420213">
-      <screen x="0" y="23" width="1920" height="999" />
+    <state x="653" y="352" key="com.intellij.ide.util.TipDialog/-1920.157.1920.1175/0.25.1920.985@0.25.1920.985" timestamp="1615788678072" />
+    <state x="625" y="238" width="670" height="171" key="search.everywhere.popup" timestamp="1615791650348">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="625" y="238" width="670" height="171" key="search.everywhere.popup/-1920.132.1920.1200/0.0.1920.1080@0.0.1920.1080" timestamp="1615791650348" />
     <state x="625" y="243" width="670" height="158" key="search.everywhere.popup/-1920.155.1920.1177/0.23.1920.999@0.23.1920.999" timestamp="1612360420213" />
   </component>
 </project>
