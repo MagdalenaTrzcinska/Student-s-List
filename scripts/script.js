@@ -13,15 +13,14 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 let students = [];
-let delay = 0.1;
+let delayTd = 0.1;
 let index = 0;
 
 btnAdd.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if (checkInputs()) {
+    if (checkingInputs()) {
         setTimeout(addingToBase, 400);
-
     }
 });
 function addingToBase() {
@@ -51,6 +50,25 @@ function resetForm() {
     })
 }
 
+function addingToTable(data) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td style="animation-delay:${delayTd}s">${data.name}</td>
+    <td style="animation-delay:${delayTd}s">${data.surname}</td>
+    <td style="animation-delay:${delayTd}s">${data.email}</td>`;
+    table.appendChild(tr);
+    delayTd += 0.1;
+
+    tr.addEventListener('click', () => {
+        deletingSingle(data.id);
+    });
+}
+
+function deletingSingle(id) {
+    table.innerHTML = '';
+    readingFromBase();
+    firebase.database().ref('student/' + id).remove();
+}
+
 function readingFromBase() {
     students = [];
     firebase.database().ref('student').once("value", (snapshot) => {
@@ -62,33 +80,9 @@ function readingFromBase() {
             data.id = id;
             index++;
             students.push(data);
-            console.log(students);
             addingToTable(data);
         });
     });
 }
 
-function addingToTable(data) {
-    const tr = document.createElement("tr");
-    tr.innerHTML = `<td style="animation-delay:${delay}s">${data.name}</td>
-    <td style="animation-delay:${delay}s">${data.surname}</td>
-    <td style="animation-delay:${delay}s">${data.email}</td>`;
-    table.appendChild(tr);
-    delay += 0.1;
-
-    tr.addEventListener('click', () => {
-        deletingSingle(data.id);
-    });
-}
-
 readingFromBase();
-
-
-function deletingSingle(id) {
-    //students.splice(data.id, 0);
-    table.innerHTML = '';
-    readingFromBase();
-    firebase.database().ref('student/' + id).remove();
-
-}
-

@@ -5,14 +5,15 @@ const formControl = document.querySelectorAll('.form-single');
 const small = document.querySelectorAll('small');
 
 
-function checkInputs() {
-    const usernameValue = name.value;
+function checkingInputs() {
+    const nameValue = name.value;
     const surnameValue = surname.value;
     const emailValue = email.value;
     removeClasses();
-    if (usernameValue === '') {
+
+    if (nameValue === '') {
         errorMessage(0, "Enter a name.");
-    } else if (withoutNumbersAndSpace(usernameValue)) {
+    } else if (withoutNumbersAndSpace(nameValue)) {
         errorMessage(0, "Name contains a forbidden character.");
     } else {
         formControl[0].classList.add('success');
@@ -21,7 +22,7 @@ function checkInputs() {
     if (surnameValue === '') {
         errorMessage(1, "Enter a surname.");
     } else if (withoutNumbersAndSpace(surnameValue)) {
-        errorMessage(1, "Name contains a forbidden character.");
+        errorMessage(1, "Surname contains a forbidden character.");
     } else {
         formControl[1].classList.add('success');
     }
@@ -32,12 +33,10 @@ function checkInputs() {
         errorMessage(2, "Email contains a forbidden character.");
     } else if (!withoutAtRule(emailValue)) {
         errorMessage(2, "Email must include @");
-    }
-    else {
+    } else {
         formControl[2].classList.add('success');
     }
-
-    if(formControl[0].classList.contains('success') && formControl[1].classList.contains('success') && formControl[2].classList.contains('success')) {
+    if (formControl[0].classList.contains('success') && formControl[1].classList.contains('success') && formControl[2].classList.contains('success')) {
         return true;
     }
 }

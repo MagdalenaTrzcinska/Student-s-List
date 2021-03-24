@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c21a8409-757a-4506-a2d4-95507450eed5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validationForm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +53,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -75,7 +82,8 @@
       <workItem from="1615539244035" duration="5728000" />
       <workItem from="1615549397516" duration="3975000" />
       <workItem from="1615788678013" duration="2782000" />
-      <workItem from="1615792505505" duration="5530000" />
+      <workItem from="1615792505505" duration="5551000" />
+      <workItem from="1616586577583" duration="3107000" />
     </task>
     <servers />
   </component>
@@ -87,11 +95,12 @@
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="553" y="180" key="#Inspections/-1920.157.1920.1175/0.25.1920.985@0.25.1920.985" timestamp="1614502702621" />
-    <state x="653" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1615788678072">
-      <screen x="0" y="25" width="1920" height="985" />
+    <state x="653" y="355" key="com.intellij.ide.util.TipDialog" timestamp="1616586577682">
+      <screen x="0" y="25" width="1920" height="995" />
     </state>
     <state x="653" y="355" key="com.intellij.ide.util.TipDialog/-1920.155.1920.1177/0.23.1920.999@0.23.1920.999" timestamp="1612354129534" />
     <state x="653" y="352" key="com.intellij.ide.util.TipDialog/-1920.157.1920.1175/0.25.1920.985@0.25.1920.985" timestamp="1615788678072" />
+    <state x="653" y="355" key="com.intellij.ide.util.TipDialog/-1920.157.1920.1175/0.25.1920.995@0.25.1920.995" timestamp="1616586577682" />
     <state x="625" y="238" width="670" height="171" key="search.everywhere.popup" timestamp="1615791650348">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
